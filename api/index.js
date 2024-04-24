@@ -1,12 +1,10 @@
-const svgs = require("../src/svg");
+const svgs = require("../../src/svg");
 
-module.exports = (req, res) => {
-  const { type, text1, text2, height, width } = req.query;
-
-  res.setHeader("Content-Type", "image/svg+xml");
+exports.handler = async (event, context) => {
+  const { queryStringParameters } = event;
+  const { type, text1, text2, height, width } = queryStringParameters;
 
   const error_svg = "origin";
-
   let svg;
 
   if (type in svgs) {
@@ -14,8 +12,16 @@ module.exports = (req, res) => {
   } else {
     svg = svgs[error_svg];
     console.log(svg("Type not valid", "refer readme for details !!"));
-    return res.send(svg("Type not valid", "refer readme for details !!"));
+    return {
+      statusCode: 200,
+      headers: { "Content-Type": "image/svg+xml" },
+      body: svg("Type not valid", "refer readme for details !!")
+    };
   }
 
-  res.send(svg({ text1, text2, height, width }));
+  return {
+    statusCode: 200,
+    headers: { "Content-Type": "image/svg+xml" },
+    body: svg({ text1, text2, height, width })
+  };
 };
