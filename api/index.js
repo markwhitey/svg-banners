@@ -1,4 +1,4 @@
-const svgs = require("../../src/svg");
+const svgs = require("../src/svg");
 
 exports.handler = async (event, context) => {
   const { queryStringParameters } = event;
