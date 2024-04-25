@@ -3,8 +3,12 @@ const rainbow = ({text1, height = 400, width = 800}) => `
 	<foreignObject width="100%" height="100%">
 		<div xmlns="http://www.w3.org/1999/xhtml">
 			<style>
+			    @font-face {
+                    font-family: 'LocalFont'; // 定义字体名称
+                    src: url('../font/ch.ttf'); // 使用相对路径
+                }
                 :root {
-                --color-background: #31037D;
+                --color-background: rgb(160, 123, 230);
                 --axis-x: 1px;
                 --axis-y: 1rem;
                 --delay: 10;
@@ -20,6 +24,7 @@ const rainbow = ({text1, height = 400, width = 800}) => `
                 }
                 .container {
                 font-family:
+                        ‘LocalFont’,
 						system-ui,
 						-apple-system,
 						'Segoe UI',
