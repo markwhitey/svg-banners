@@ -46,7 +46,7 @@ const rainbow = ({text1, height = 400, width = 800}) => `
                 border-radius: 10px;
                 color: rgba(255,255,255,.75);
                 text-align: center;
-                font-size: 24px;
+                font-size: 16px;
                 }
                 .c-rainbow {
                 counter-reset: rainbow;
@@ -60,7 +60,7 @@ const rainbow = ({text1, height = 400, width = 800}) => `
                 .c-rainbow__layer {
                 --text-color: var(--color-foreground);
                 counter-increment: rainbow;
-                font-size: 3rem;
+                font-size: 2rem;
                 font-weight: 600;
                 color: var(--text-color);
                 text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black), -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black), 4px 4px 0 rgba(0, 0, 0, 0.2);
