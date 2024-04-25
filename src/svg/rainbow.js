@@ -24,7 +24,7 @@ const rainbow = ({text1, height = 400, width = 800}) => `
                 }
                 .container {
                 font-family:
-                        ‘LocalFont’,
+                        'LocalFont',
 						system-ui,
 						-apple-system,
 						'Segoe UI',
