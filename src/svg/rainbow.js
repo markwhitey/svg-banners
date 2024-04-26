@@ -5,7 +5,7 @@ const rainbow = ({text1, height = 400, width = 800}) => `
 			<style>
 			    @font-face {
                     font-family: 'LocalFont'; // 定义字体名称
-                    src: url('../font/ch.ttf'); // 使用相对路径
+                    src: url('../font/XiaolaiMonoSC-Regular.ttf'); // 使用相对路径
                 }
                 :root {
                 --color-background: rgb(160, 123, 230);
